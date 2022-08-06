@@ -7,21 +7,23 @@ constructor() {
     super();
 
     this.state = {
-        users: [
-            { name: 'Joana',
-              id: '1'
-            },
-            { name: 'Ana',
-              id: '2'  },
-            { name: 'John',
-              id: '3'  },
-            { name: 'Roby',
-              id: '4'  },
-        ],
+        users: [],
     }
 }
 
-  render() {
+componentDidMount() {
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response =>
+            response.json()
+                .then((users) => this.setState(() => {
+                    return { users: users}
+                },
+                    () => {console.log(this.state)}
+                ))
+        );
+}
+
+    render() {
     return (
         <div className="App">
             { this.state.users.map((user) => {
