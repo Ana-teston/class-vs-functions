@@ -23,7 +23,7 @@ constructor() {
             <button onClick={() => {
                 this.setState(() => {
                     return{
-                        name: { firstName: 'Ana', lastName: 'Teston' },
+                        name: { firstName: 'Ana', lastName: 'Test' },
                     }
                 }, () => {
                     console.log(this.state);
