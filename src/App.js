@@ -1,4 +1,6 @@
 import { Component } from "react";
+import CardList from "./components/card-list/card-list.component";
+import SearchBox from "./components/search-box/search-box.component";
 import './App.css';
 
 class App extends Component {
@@ -9,44 +11,42 @@ constructor() {
         users: [],
         searchField: ''
     };
-    console.log('constructor');
 }
 
 componentDidMount() {
-    console.log('componentDidMount');
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(response =>
             response.json()
                 .then((users) => this.setState(() => {
                     return { users: users}
                 },
-                    () => {console.log(this.state)}
                 ))
         );
 }
 
+onSearchChange = (event) => {
+    const searchField = event.target.value.toLocaleLowerCase();
+    this.setState(() => {
+        return {searchField};
+    });
+};
+
     render() {
+        const { users, searchField } = this.state;
+        const { onSearchChange } = this;
+
         const filteredUsers = this.state.users.filter((user) => {
-            return user.name.toLocaleLowerCase().includes(this.state.searchField)
+            return user.name.toLocaleLowerCase().includes(searchField)
         });
 
     return (
         <div className="App">
-            <input className='search-box'
-                   type='search'
-                   placeholder='Search Users'
-                   onChange={(event) => {
-                       const searchField = event.target.value.toLocaleLowerCase();
-                       this.setState(() => {
-                               return { searchField };
-                           });
-                       }}
+            <h1 className="app-title">Kid Cat</h1>
+            <SearchBox onChangeHandler={onSearchChange}
+                       placeholder='search users'
+                       className='search-box'
             />
-            { filteredUsers.map((user) => {
-                return <div key={user.id}>
-                    <h1>{user.name}</h1>
-                </div>;
-            })}
+            <CardList users={filteredUsers}/>
         </div>
     );
   }
