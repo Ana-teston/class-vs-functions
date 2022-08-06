@@ -7,29 +7,28 @@ constructor() {
     super();
 
     this.state = {
-        name: { firstName: 'Ana Paula', lastName: 'Teston' },
-        company: 'Zero To Mastery'
+        users: [
+            { name: 'Joana',
+              id: '1'
+            },
+            { name: 'Ana',
+              id: '2'  },
+            { name: 'John',
+              id: '3'  },
+            { name: 'Roby',
+              id: '4'  },
+        ],
     }
 }
 
   render() {
     return (
         <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <p>
-              Hello i'm {this.state.name.firstName} {this.state.name.lastName}, I study at { this.state.company}!
-            </p>
-            <button onClick={() => {
-                this.setState(() => {
-                    return{
-                        name: { firstName: 'Ana', lastName: 'Test' },
-                    }
-                }, () => {
-                    console.log(this.state);
-                })
-            }}>Change Name</button>
-          </header>
+            { this.state.users.map((user) => {
+                return <div key={user.id}>
+                    <h1>{user.name}</h1>
+                </div>;
+            })}
         </div>
     );
   }
