@@ -7,7 +7,8 @@ constructor() {
     super();
 
     this.state = {
-        name: 'Ana Paula'
+        name: { firstName: 'Ana Paula', lastName: 'Teston' },
+        company: 'Zero To Mastery'
     }
 }
 
@@ -17,9 +18,12 @@ constructor() {
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo"/>
             <p>
-              Hello i'm {this.state.name}!
+              Hello i'm {this.state.name.firstName} {this.state.name.lastName}, I study at { this.state.company}!
             </p>
-            <button>Change Name</button>
+            <button onClick={() => {
+                this.setState({ name: {firstName: 'Ana', lastName: 'Teston'} })
+                console.log(this.state)
+            }}>Change Name</button>
           </header>
         </div>
     );
