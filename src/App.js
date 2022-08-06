@@ -21,8 +21,13 @@ constructor() {
               Hello i'm {this.state.name.firstName} {this.state.name.lastName}, I study at { this.state.company}!
             </p>
             <button onClick={() => {
-                this.setState({ name: {firstName: 'Ana', lastName: 'Teston'} })
-                console.log(this.state)
+                this.setState(() => {
+                    return{
+                        name: { firstName: 'Ana', lastName: 'Teston' },
+                    }
+                }, () => {
+                    console.log(this.state);
+                })
             }}>Change Name</button>
           </header>
         </div>
