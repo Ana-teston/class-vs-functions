@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "https:https://ana-teston.github.io/class-vs-functions/static/css/main.08324edf.css",
-    "main.js": "https:https://ana-teston.github.io/class-vs-functions/static/js/main.6aea34f7.js",
-    "static/js/787.475fbc4c.chunk.js": "https:https://ana-teston.github.io/class-vs-functions/static/js/787.475fbc4c.chunk.js",
-    "index.html": "https:https://ana-teston.github.io/class-vs-functions/index.html",
-    "main.08324edf.css.map": "https:https://ana-teston.github.io/class-vs-functions/static/css/main.08324edf.css.map",
-    "main.6aea34f7.js.map": "https:https://ana-teston.github.io/class-vs-functions/static/js/main.6aea34f7.js.map",
-    "787.475fbc4c.chunk.js.map": "https:https://ana-teston.github.io/class-vs-functions/static/js/787.475fbc4c.chunk.js.map"
+    "main.css": "/class-vs-functions/static/css/main.08324edf.css",
+    "main.js": "/class-vs-functions/static/js/main.11d5d446.js",
+    "static/js/787.475fbc4c.chunk.js": "/class-vs-functions/static/js/787.475fbc4c.chunk.js",
+    "index.html": "/class-vs-functions/index.html",
+    "main.08324edf.css.map": "/class-vs-functions/static/css/main.08324edf.css.map",
+    "main.11d5d446.js.map": "/class-vs-functions/static/js/main.11d5d446.js.map",
+    "787.475fbc4c.chunk.js.map": "/class-vs-functions/static/js/787.475fbc4c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.08324edf.css",
-    "static/js/main.6aea34f7.js"
+    "static/js/main.11d5d446.js"
   ]
 }
