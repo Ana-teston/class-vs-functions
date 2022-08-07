@@ -1,5 +1,5 @@
 body {
-  margin: 0;
+  margin: 40px;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,8 +14,10 @@ body {
 
 .app-title {
   margin-top: 75px;
-  margin-bottom: 30px;
-  font-size: 76px;
-  color: aquamarine;
+  margin-bottom: 20px;
+  font-size: 136px;
+  text-align: center;
+  color: #f2ff7f;
   font-family: 'Bigelow Rules';
 }
+

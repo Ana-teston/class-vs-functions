@@ -2,7 +2,13 @@
     width: 85vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
 }
 
+@media screen and (min-width: 680px){
+   .card-list {
+       width: 1024px;
+   }
+}
