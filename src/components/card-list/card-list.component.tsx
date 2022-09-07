@@ -1,7 +1,13 @@
 import Card from "../card/card.component";
+import { User } from "../../App";
 import './card-list.styles.css';
 
-const CardList = ({users}) => (
+type CardListProps = {
+    users: User[];
+};
+
+
+const CardList = ({users}: CardListProps) => (
     <div className='card-list'>
         {users.map((user) => {
             return <Card user={user}/>
